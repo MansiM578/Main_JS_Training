@@ -1,2 +1,2 @@
-# Main_JS_Training
+# Main_JS_Projects
 JavaScript Projects
