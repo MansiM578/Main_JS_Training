@@ -3,9 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>CountDown</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <h1>Countdown Timer</h1>
+    <form id="frm1" class="input_box clr">
+      <input
+        type="text"
+        name="fname"
+        class="hour"
+        value=""
+        placeholder="Hours"
+        requires
+      />
+      Hrs
+      <input
+        type="text"
+        name="lname"
+        class="min"
+        class=""
+        value=""
+        placeholder="Minutes"
+        required
+      />
+      Min
+    </form>
+
+    <button class="start input_box" onclick="getTime()">Start Timer</button>
+
+    <h2 id="countdown"></h2>
+
     <script src="script.js"></script>
   </body>
 </html>
