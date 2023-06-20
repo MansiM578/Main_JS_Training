@@ -117,3 +117,21 @@ img {
   background-color: orangered;
   color: var(--white);
 }
+
+@media screen and (max-width: 480px) {
+  .calc {
+    width: 23rem;
+    height: 28rem;
+    margin: 0 20px;
+  }
+  .keys {
+    grid-gap: 4px;
+    font-size: 1.3rem;
+  }
+  .keys li {
+    width: 4rem;
+    margin: 0.7rem 0.35rem;
+    padding: 0.75rem;
+    border-radius: 2px;
+  }
+}

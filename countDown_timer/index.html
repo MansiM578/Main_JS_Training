@@ -8,13 +8,15 @@
   </head>
   <body>
     <h1>Countdown Timer</h1>
-    <form id="frm1" class="input_box clr">
+
+    <form id="myForm" class="input_box clr">
+      <br />
       <input
         type="text"
         name="fname"
         class="hour"
         value=""
-        placeholder="Hours"
+        placeholder=" Hours"
         requires
       />
       Hrs
@@ -22,17 +24,21 @@
         type="text"
         name="lname"
         class="min"
-        class=""
         value=""
-        placeholder="Minutes"
+        placeholder=" Minutes"
         required
       />
       Min
     </form>
 
-    <button class="start input_box" onclick="getTime()">Start Timer</button>
+    <button class="start input_box" onclick="myFunction()">Start Timer</button>
 
-    <h2 id="countdown"></h2>
+    <div id="progress">
+      <div id="progress-bar"></div>
+    </div>
+
+    <h2 id="countdown">CountDown Timer</h2>
+    <audio id="timeOutSound" src="./media/sound.mp3"></audio>
 
     <script src="script.js"></script>
   </body>
