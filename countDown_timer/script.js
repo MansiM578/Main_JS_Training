@@ -1,7 +1,7 @@
 // "use strict";
-var t = 0;
+let t = 0;
 function myFunction() {
-  var x = document.getElementById("myForm");
+  let x = document.getElementById("myForm");
   hr = x.elements[0].value;
   min = x.elements[1].value;
 
@@ -10,11 +10,11 @@ function myFunction() {
   timer();
 }
 function timer() {
-  var temp = window.t;
+  let temp = window.t;
   window.t = window.t - 1;
-  var h = Math.floor(temp / 3600);
-  var m = Math.floor((temp % 3600) / 60);
-  var s = Math.floor(temp - h * 3600 - m * 60);
+  let h = Math.floor(temp / 3600);
+  let m = Math.floor((temp % 3600) / 60);
+  let s = Math.floor(temp - h * 3600 - m * 60);
   m = checkTime(m);
   s = checkTime(s);
   document.getElementById("countdown").innerHTML =
@@ -22,13 +22,13 @@ function timer() {
   document.getElementById("progress-bar").style.width =
     (temp * 100) / window.per + "%";
 
-  var t = setTimeout(timer, 1000);
+  let t = setTimeout(timer, 1000);
 
   if (temp < 0) {
     clearTimeout(t);
     document.getElementById("countdown").innerHTML = "Countdown Time Out";
     function playAlarm() {
-      var alarm = document.getElementById("timeOutSound");
+      let alarm = document.getElementById("timeOutSound");
       alarm.play();
     }
 
