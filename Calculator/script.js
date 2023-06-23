@@ -4,9 +4,10 @@ const result = document.querySelector("p");
 const clear = document.querySelector(".clear");
 
 for (let i = 0; i < keys.length; i++) {
-  keys[i].innerHTML === "="
-    ? keys[i].addEventListener("click", calculate)
-    : keys[i].addEventListener("click", addToCurrentValue(i));
+  keys[i].addEventListener(
+    "click",
+    keys[i].innerHTML === "=" ? calculate : addToCurrentValue(i)
+  );
 }
 function addToCurrentValue(i) {
   return () => {
