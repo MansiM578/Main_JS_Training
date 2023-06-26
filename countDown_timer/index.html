@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CountDown</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Countdown Timer</h1>
+
+    <form id="myForm" class="input_box clr">
+      <br />
+      <input
+        type="text"
+        name="fname"
+        class="hour"
+        value=""
+        placeholder=" Hours"
+        requires
+      />
+      Hrs
+      <input
+        type="text"
+        name="lname"
+        class="min"
+        value=""
+        placeholder=" Minutes"
+        required
+      />
+      Min
+    </form>
+
+    <button class="start input_box" onclick="myFunction()">Start Timer</button>
+
+    <div id="progress">
+      <div id="progress-bar"></div>
+    </div>
+
+    <h2 id="countdown">CountDown Timer</h2>
+    <audio id="timeOutSound" src="./media/sound.mp3"></audio>
+
+    <script src="script.js"></script>
+  </body>
+</html>

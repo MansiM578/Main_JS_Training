@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 100px;
+  background: url(./images/bg.jpg) no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  font-size: 58px;
+  color: #fff;
+  line-height: 2;
+  margin-left: auto;
+  margin-right: auto;
+}
+.clr {
+  color: #fff;
+}
+#countdown {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  font-size: 45px;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.hour,
+.min,
+.sec,
+.start,
+.stop {
+  margin-left: 0.25rem;
+  padding: 4px 8px;
+  font-size: 16px;
+}
+
+.start {
+  background-color: rgb(3, 197, 3);
+  color: #fff;
+  cursor: pointer;
+}
+.stop {
+  background-color: rgb(255, 33, 59);
+  color: #fff;
+  cursor: pointer;
+}
+
+.input_box {
+  padding: 5px;
+  margin-bottom: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 570px) {
+  h1 {
+    padding-top: 30px;
+    font-size: 40px;
+    line-height: 2;
+  }
+  #countdown {
+    padding-top: 15px;
+    padding: 20px;
+    border-radius: 3px;
+    font-size: 24px;
+  }
+  .input_box {
+    padding: 5px;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 55%;
+  }
+  .min,
+  .hour {
+    /* margin-left: 40px; */
+    margin-right: auto;
+    padding-left: 20px;
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 480px) {
+  h1 {
+    padding-top: 30px;
+    font-size: 35px;
+    line-height: 2;
+  }
+  #countdown {
+    padding-top: 15px;
+    padding: 15px;
+    border-radius: 3px;
+    font-size: 24px;
+  }
+  .input_box {
+    padding: 5px;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 70%;
+  }
+  .min,
+  .hour {
+    /* margin-left: 40px; */
+    margin-right: auto;
+    padding-left: 20px;
+    margin-top: 10px;
+  }
+}
