@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form id="contactForm" method="POST" novalidate>
+        <h1 class="main_heading">Form</h1>
+        <!-- <p>Required fields are followed by *</p> -->
+        <h2>User Information</h2>
+        <div>
+          <label for="firstName" important>FirstName: </label>
+          <input
+            type="text"
+            name="firstName"
+            id="firstName"
+            required
+            placeholder="FirstName"
+          />
+          <span class="error" id="firstNameError" />
+        </div>
+        <div>
+          <label for="lastName">LastName: *</label>
+          <input
+            type="text"
+            id="lastName"
+            name="lastName"
+            required
+            placeholder="LastName"
+          />
+          <span class="error" id="lastNameError" />
+        </div>
+        <fieldset>
+          <legend><label for="">Gender *</label></legend>
+          <div>
+            <input type="radio" name="gender" value="Male" id="male" required />
+            <label for=""> Male</label>
+            <input
+              type="radio"
+              name="gender"
+              value="Female"
+              id="female"
+              required
+            />
+            <label for="">Female</label>
+            <input
+              type="radio"
+              name="gender"
+              value="Other"
+              id="female"
+              required
+            />
+            <label for="">Other</label>
+          </div>
+          <span class="error" id="genderError" />
+        </fieldset>
+        <div>
+          <fieldset>
+            <legend><label for="address">Address:</label></legend>
+            <div>
+              <label for="plot">Plot: </label
+              ><input type="text" name="plot" id="plot" />
+            </div>
+            <div>
+              <label for="country"> Country:</label>
+              <select id="country" name="country" class="form-control">
+                <option value="Country">-- Country --</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="state">State:</label>
+              <select id="region" name="state" class="form-control">
+                <option value="Region">-- Region --</option>
+              </select>
+            </div>
+            <div>
+              <label for="city">City:</label>
+              <select id="city" name="city" class="form-control">
+                <option value="City">-- City --</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="pin">Pincode: *</label>
+              <input
+                type="number"
+                name="pin"
+                id="pin"
+                placeholder="123456"
+                minlength="6"
+                maxlength="6"
+                required
+              />
+            </div>
+            <span class="error" id="addressError" />
+          </fieldset>
+        </div>
+        <div>
+          <label for="email">Email: *</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="pandey@gmail.com"
+            required
+          />
+          <span class="error" id="emailError" />
+        </div>
+        <div>
+          <label for="mobileNumber">Mobile Number: </label>
+          <input type="number" name="mobileNumber" id="mobileNumber" />
+          <span class="error" id="mobileNumberError" />
+        </div>
+        <div>
+          <label for="age"> Age:</label>
+          <input type="number" name="age" id="age" />
+          <span class="error" id="ageError" />
+        </div>
+        <div>
+          <label for="dob">Date of Birth: </label
+          ><input type="date" name="dob" id="dob" />
+          <span class="error" id="dobError" />
+        </div>
+        <fieldset>
+          <legend><label for="clubs">Clubs *</label></legend>
+          <div>
+            <input
+              type="checkbox"
+              class="messageCheckbox"
+              value="Gryffindor"
+              name="clubs"
+              id="Gryffindor"
+            />
+            <label for="choice">Gryffindor</label>
+            <input
+              type="checkbox"
+              class="messageCheckbox"
+              value="Slitherine"
+              name="clubs"
+              id="Slitherine"
+            />
+            <label for="choice"> Slitherine</label>
+            <input
+              type="checkbox"
+              class="messageCheckbox"
+              value="Hufflepuff"
+              name="clubs"
+              id="Hufflepuff"
+            />
+            <label for="choice">Hufflepuff</label>
+            <input
+              type="checkbox"
+              class="messageCheckbox"
+              value="Ravenclaw"
+              name="clubs"
+              id="Ravenclaw"
+            />
+            <label for="choice">Ravenclaw</label>
+          </div>
+          <span class="error" id="clubsError" />
+        </fieldset>
+        <div>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+
+    <table id="table" border="2">
+      <tr>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>Gender</th>
+        <th>Address</th>
+        <th>Email</th>
+        <th>Age</th>
+        <th>Date of Birth</th>
+        <th>Clubs</th>
+      </tr>
+    </table>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="script2.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
