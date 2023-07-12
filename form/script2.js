@@ -49,11 +49,11 @@ document
         value: email,
         fieldId: "email",
       },
-      {
-        regex: /^\+91[0-9]{10}$/,
-        value: mobileNumber,
-        fieldId: "mobileNumber",
-      },
+      // {
+      //   regex: /^\+91[0-9]{10}$/,
+      //   value: mobileNumber,
+      //   fieldId: "mobileNumber",
+      // },
 
       {
         regex: /^(?:[5-9]|[1-9][0-9])$/,
@@ -85,12 +85,12 @@ document
       firstName,
       lastName,
       gender,
-      clubs,
       address,
       email,
       mobileNumber,
       age,
       dob,
+      clubs,
     };
 
     // retreiving exxisting data from local storage
@@ -102,7 +102,7 @@ document
     } else {
       data1 = [];
     }
-
+    console.log(data1);
     //add new form data to the array
     data1.push(userData);
 
