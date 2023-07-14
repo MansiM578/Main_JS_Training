@@ -30,12 +30,11 @@ $(document).ready(function () {
     selectedCountry = this.options[this.selectedIndex].text;
     countryCode = $("#country").val().split("-")[1];
     // Populate country select box from battuta API
-    url =
-      "https://battuta.medunes.net/api/region/" +
-      countryCode +
-      "/all/?key=" +
-      BATTUTA_KEY +
-      "&callback=?";
+    url = `https://battuta.medunes.net/api/region/ 
+      ${countryCode} 
+      "/all/?key=" 
+      ${BATTUTA_KEY} 
+      &callback=?`;
     $.getJSON(url, function (data) {
       $("#region option").remove();
       $("#region").append(
@@ -55,14 +54,13 @@ $(document).ready(function () {
     // Populate country select box from battuta API
     countryCode = $("#country").val().split("-")[1];
     region = $("#region").val();
-    url =
-      "https://battuta.medunes.net/api/city/" +
-      countryCode +
-      "/search/?region=" +
-      region +
-      "&key=" +
-      BATTUTA_KEY +
-      "&callback=?";
+    url = `https://battuta.medunes.net/api/city/
+      ${countryCode} 
+      /search/?region=
+      ${region} +
+      &key=
+      ${BATTUTA_KEY} 
+      &callback=?`;
     $.getJSON(url, function (data) {
       console.log(data);
       $("#city option").remove();
